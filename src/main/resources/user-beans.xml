@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans
+                            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                            http://www.springframework.org/schema/context
+                            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:component-scan base-package="com.javed.*"/>
+    <context:annotation-config/>
+
+    <context:property-placeholder location='classpath:redis.properties'/>
+
+    <bean id="userService" class="com.javed.aws.applications.service.UserServiceImpl"/>
+    <bean id="userDao" class="com.javed.aws.applications.dao.UserDaoImpl"/>
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.mariadb.jdbc.Driver"/>
+        <property name="url"
+                  value="jdbc:mariadb://aws-maria-db.cn5qj2wczhjn.ap-south-1.rds.amazonaws.com:3306/test_app_db"/>
+        <property name="username" value="admin"/>
+        <property name="password" value="admin1234"/>
+    </bean>
+
+</beans>
