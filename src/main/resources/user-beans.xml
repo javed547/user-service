@@ -20,9 +20,8 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.mariadb.jdbc.Driver"/>
-        <property name="url"
-                  value="jdbc:mariadb://aws-maria-db.cn5qj2wczhjn.ap-south-1.rds.amazonaws.com:3306/test_app_db"/>
-        <property name="username" value="admin"/>
+        <property name="url" value="jdbc:mariadb://localhost:3306/springboot_mariadb"/>
+        <property name="username" value="root"/>
         <property name="password" value="admin1234"/>
     </bean>
 
