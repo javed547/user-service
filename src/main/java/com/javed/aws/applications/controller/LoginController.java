@@ -23,16 +23,6 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    /*@RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
-
-        logger.info(" rendering login page for user ");
-
-        ModelAndView mav = new ModelAndView("login");
-        mav.addObject("login", new Login());
-        return mav;
-    }*/
-
     @RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
     public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
                                      @ModelAttribute("login") Login login) {

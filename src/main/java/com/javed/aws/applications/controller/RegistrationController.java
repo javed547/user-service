@@ -3,6 +3,7 @@ package com.javed.aws.applications.controller;
 import com.javed.aws.applications.model.User;
 import com.javed.aws.applications.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +25,9 @@ public class RegistrationController {
         mav.addObject("user", new User());
         return mav;
     }
+
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
+    @Cacheable("storeDetails")
     public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
                                 @ModelAttribute("user") User user) {
         userService.register(user);
