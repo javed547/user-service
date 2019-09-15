@@ -8,4 +8,12 @@ User Service is web based application developed to build and tested on AWS EC2 c
 
 3 : Integrate Redis Cache to leverage Elastic Cache feature of AWS
 
-4 : Integrate BootStap JS to integrate more pages to web application
+4 : Integrate BootStrap JS to integrate more pages to web application
+
+## AWS Features integrated in applications are
+1 : Application developed to work maria DB hosted on AWS's DB2 services.
+
+2 : Application is developed to work with resource folder, 
+    same location can be changed to AWS's S3 buckets.
+    
+     
