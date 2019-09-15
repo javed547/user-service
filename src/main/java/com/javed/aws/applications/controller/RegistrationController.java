@@ -20,7 +20,7 @@ public class RegistrationController {
     private UserService userService;
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) throws Exception {
         ModelAndView mav = new ModelAndView("register");
         mav.addObject("user", new User());
         return mav;
@@ -29,7 +29,7 @@ public class RegistrationController {
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
     @Cacheable("storeDetails")
     public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
-                                @ModelAttribute("user") User user) {
+                                @ModelAttribute("user") User user) throws Exception {
         userService.register(user);
         return new ModelAndView("welcome", "firstname", user.getFirstname());
     }

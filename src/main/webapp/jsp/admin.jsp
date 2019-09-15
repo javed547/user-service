@@ -13,6 +13,8 @@
         <c:if test="${pageContext.request.userPrincipal.name != null}">
             <h2>Welcome : ${pageContext.request.userPrincipal.name} |
                 <a href="/UserService/logout" />Logout</a></h2>
+
+            <h2><a href="/UserService/uploadForm">Upload File</a></h2>
     </c:if>
     </div>
 </body>
