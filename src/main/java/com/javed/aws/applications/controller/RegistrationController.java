@@ -32,7 +32,6 @@ public class RegistrationController {
     }
 
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
-    @Cacheable("storeDetails")
     public ModelAndView addUser(HttpServletRequest request, HttpServletResponse response,
                                 @ModelAttribute("user") User user) throws Exception {
         userService.register(user);

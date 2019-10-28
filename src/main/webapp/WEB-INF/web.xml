@@ -5,7 +5,7 @@
                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
                             id="WebApp_ID" version="3.1">
 
-    <display-name>User Service Web Application</display-name>
+    <display-name>User Service</display-name>
 
     <!--<welcome-file-list>
         <welcome-file>home.jsp</welcome-file>
