@@ -19,7 +19,7 @@
         <mysql.connector.version>5.1.9</mysql.connector.version>
         <maria.connector.version>1.5.5</maria.connector.version>
         <log4j2-version>2.6</log4j2-version>
-        <spring.security.version>4.0.3.RELEASE</spring.security.version>
+        <spring.security.version>5.2.10.RELEASE</spring.security.version>
         <jstl.version>1.2</jstl.version>
     </properties>
 
